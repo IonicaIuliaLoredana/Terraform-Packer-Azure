@@ -1,2 +1,1 @@
 # Easily Create Azure VM Custom Linux Images for ASP.NET Core Services with GitHub Actions and Packer
-This repository contains the code and scripts disscused in the article [Easily Create Azure VM Custom Linux Images for ASP.NET Core Services with GitHub Actions and Packer](https://medium.com/microsoftazure/easily-create-azure-vm-custom-linux-images-for-asp-net-core-services-with-github-actions-and-packer-4abd34540980).
