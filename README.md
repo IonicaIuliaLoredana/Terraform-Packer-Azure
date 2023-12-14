@@ -21,18 +21,18 @@ The project is structured in two main parts:
  - Next we will create the actual packer script, called main.pkr.hcl, which will first define the source image to use
  - And then the build tasks, which include:
 
-    Uploading the service file after values have been applied to the template
-    Create the service’s directory
-    Change the ownership to our non-rooted user
-    Upload the service’s compiled binaries
-    Grant execution permissions to the service’s files
+    * Uploading the service file after values have been applied to the template
+    * Create the service’s directory
+    * Change the ownership to our non-rooted user
+    * Upload the service’s compiled binaries
+    * Grant execution permissions to the service’s files
 	
  - And then the build tasks, which include:
-    Uploading the service file after values have been applied to the template
-    Create the service’s directory
-    Change the ownership to our non-rooted user
-    Upload the service’s compiled binaries
-    Grand execution permissions to the service’s files
+    * Uploading the service file after values have been applied to the template
+    * Create the service’s directory
+    * Change the ownership to our non-rooted user
+    * Upload the service’s compiled binaries
+    * Grand execution permissions to the service’s files
 	
  - Creating the service principal is fairly easy using the Azure CLI. The following command will create the principal associated to the Contributor role, as Packer will be deploying temporary resources to create the image and will also store the image in an existing resource group:
 az ad sp create-for-rbac --name github-actions-packer --role Contributor --query "{ client_id: appId, client_secret: password, tenant_id: tenant }"	
