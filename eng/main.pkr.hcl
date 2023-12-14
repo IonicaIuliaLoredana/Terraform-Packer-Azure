@@ -6,7 +6,7 @@ locals {
     command = "${local.destination_directory}/${var.executable_name}"
   })
 }
- 
+
 source "azure-arm" "this" {
   client_id                         = var.client_id
   client_secret                     = var.client_secret
@@ -16,8 +16,9 @@ source "azure-arm" "this" {
   managed_image_resource_group_name = var.resource_group_name
   os_type                           = "Linux"
   image_publisher                   = "Canonical"
-  image_offer                       = "0001-com-ubuntu-server-jammy"
-  image_sku                         = "22_04-lts-gen2"
+  image_offer                       = "UbuntuServer"
+  image_sku                         = "18.04-LTS"
+  image_version                     = "latest"
   location                          = "East US"
   vm_size                           = "Standard_DS2_v2"
 }
