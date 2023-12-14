@@ -1,5 +1,4 @@
-# Easily Create Azure VM Custom Linux Images for ASP.NET Core Services with GitHub Actions and Packer
-# Azure Linux Image for ASP.NET Core App with GitHub Actions and Packer  
+# Azure Linux Image for ASP.NET Core App with Terraform, GitHub Actions and Packer  
 
 The project is structured in two main parts:
  1) the provisioning of the VM in Azure Cloud using Terraform
