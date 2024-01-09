@@ -1,10 +1,12 @@
 # Azure Linux Image for ASP.NET Core App with Terraform, GitHub Actions and Packer  
 
 The project is structured in two main parts:
- 1) the provisioning of the VM in Azure Cloud using Terraform
- 2) establishing the GitHub Actions workflow
+ A) the provisioning of the VM in Azure Cloud using Terraform
+ B) establishing the GitHub Actions workflow
  
- 1) Provisioning with Terraform
+
+
+ A) Provisioning with Terraform
  
  - After logging in into Azure Cloud on my local machine and installing Terraform plugin-in in Visual Studio Code, I initialized the Terraform deployment. 
  This downloads the Azure provider required to manage your Azure resources.
@@ -13,7 +15,7 @@ The project is structured in two main parts:
  
  After the first stage of provisioning the resources, I installed AWS CLI.
  
- 2) The Workflow
+ B) The Workflow
  
  - First of all, in the src folder we have the ASP.NET application.
  - We start by creating a Linux systemd template file called service.tpl
@@ -36,7 +38,8 @@ The project is structured in two main parts:
 	
  - Creating the service principal is fairly easy using the Azure CLI. The following command will create the principal associated to the Contributor role, as Packer will be deploying temporary resources to create the image and will also store the image in an existing resource group:
 az ad sp create-for-rbac --name github-actions-packer --role Contributor --query "{ client_id: appId, client_secret: password, tenant_id: tenant }"	
-We can check the outcome of this command in Azure Default Directory. Also, we can create the service principal in our subscription, manually.
+We can check the outcome of this command in Azure Default Directory. 
+Also, we can create the service principal in our subscription, manually.
 	
 	The workflow is split into two jobs:
 
