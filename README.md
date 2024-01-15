@@ -13,7 +13,7 @@ The project is structured in two main parts:
  - terraform plan -out main.tfplan - creates an execution plan
  - terraform apply main.tfplan - to apply the execution plan to mycloud infrastructure
  
- After the first stage of provisioning the resources, I installed AWS CLI.
+ After the first stage of provisioning the resources, I installed Azure CLI.
  
  B) The Workflow
  
